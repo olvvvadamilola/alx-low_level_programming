@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main -  main function
- * puts:function
+ * main -  entry point in C
+ * puts:function that outputs a string to console
  *
- * Return:ends with 0
+ * Return:ends function and returns to 0
  */
 
 int main(void)
