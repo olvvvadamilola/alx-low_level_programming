@@ -7,26 +7,23 @@
 */
 int main(void)
 {
-	int NumOne;
+	int a, b;
 
-	while (NumOne < 9)
+	for (a = 0; a < 10; a++)
 {
-	int NumTwo = NumOne + 1;
-
-	while (NumTwo <= 9)
+	for (b = a + 1; b < 10; b++)
 {
-	putchar(NumOne + '0');
-	putchar(NumTwo + '0');
+	putchar(a + '0');
+	putchar(b + '0');
 
-	if (NumOne != 8 || NumTwo != 9)
+	if (a != 8 || b != 9)
 {
 	putchar(',');
 	putchar(' ');
 }
-	NumOne++;
 }
-	NumTwo++;
 }
 	putchar('\n');
+
 	return (0);
 }
