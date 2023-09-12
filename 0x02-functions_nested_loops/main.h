@@ -2,9 +2,9 @@
 #define main_h
 /**
 * main - entry point of program
-* headers
+* description - headers
 *
-* Return : always 0
+* Return: 0
 */
 int _putchar (char a);
 #endif
