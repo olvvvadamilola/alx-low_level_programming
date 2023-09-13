@@ -9,10 +9,12 @@
 int main(void)
 {
 	int i;
+	long a = 1;
+	long b = 2;
 	long fibonacci[50];
 
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
+	fibonacci[0] = a;
+	fibonacci[1] = b;
 
 	for (i = 2; i < 50; i++)
 {
@@ -20,9 +22,9 @@ int main(void)
 }
 	for (i = 0; i < 49; i++)
 {
-	printf("%d, ", fibonacci[i]);
+	printf("%ld, ", fibonacci[i]);
 }
-	printf("%d\n", fibonacci[49]);
+	printf("%ld\n", fibonacci[49]);
 
 	return (0);
 }
