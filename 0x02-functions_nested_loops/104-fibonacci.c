@@ -7,21 +7,26 @@
 */
 int main(void)
 {
-	int a = 1, b = 2;
-	int count = 0;
+	unsigned int a = 1, b = 2, next;
+	int count;
 
 
 /* Print the first two Fibonacci numbers */
-	printf("%d, %d", a, b);
+	printf("%u, %u", a, b);
 
-	while (count < 96)
+	for (count = 2; count < 98; count++)
 {
-	int next = a + b;
+	next = a + b;
 
-	printf(", %d", next);
+	if (next < a || next < b)
+{
+	break;
+}
+
+	printf(", %u", next);
+
 	a = b;
 	b = next;
-	count++;
 }
 	printf("\n");
 
