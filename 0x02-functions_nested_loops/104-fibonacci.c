@@ -14,20 +14,15 @@ int main(void)
 /* Print the first two Fibonacci numbers */
 	printf("%u, %u", a, b);
 
-	for (count = 2; count < 98; count++)
+	for (count =2; count < 100; count++)
 {
 	next = a + b;
-
-	if (next < a || next < b)
-{
-	break;
-}
-
-	printf(", %u", next);
-
 	a = b;
 	b = next;
+
+	printf(", %u", next);
 }
+
 	printf("\n");
 
 	return (0);
