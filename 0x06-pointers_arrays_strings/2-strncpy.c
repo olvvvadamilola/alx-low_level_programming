@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
 /**
  * _strncopy - copies a string
  * @dest: destination of string
@@ -21,6 +20,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 	}
+
 	for (; i < n; i++)
 	{
 		dest[i] = '\0';
