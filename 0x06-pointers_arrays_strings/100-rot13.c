@@ -7,14 +7,20 @@
  */
 char *rot13(char *a)
 {
-	char *p = a;
+	int i;
+	int j;
+	char normal[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (; *p; p++)
+	for (i = 0; a[i] != '\0'; i++)
 	{
-		if ((*p >= 'a' && *p <= 'z') || (*p >= 'A' && *p <= 'Z'))
+		for (j = 0; j < 52; j++)
 		{
-			char base = (*p >= 'a' && *p <= 'z') ? 'a' : 'A';
-			*p = (((*p - base + 13) % 26) + base);
+			if (a[i] == normal[j])
+			{
+				a[i] = rot[j];
+				break;
+			}
 		}
 	}
 	return (a);
