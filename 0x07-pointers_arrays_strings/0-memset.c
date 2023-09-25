@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * memset - fill memory byte with a constant byte
+ * _memset - fill memory byte with a constant byte
  * @s: array
  * @b: value to be assigned
  * @n: total number of element in array
