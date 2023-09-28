@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _print_rev_recursion - A function that recursively prints a string in reverse order.
+ * _print_rev_recursion - prints a string in reverse order.
  *  @s: input string
  * Return: 0
  */
