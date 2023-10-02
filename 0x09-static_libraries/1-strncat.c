@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
 /**
  * _strncat -concatenates two strings n times
  * @dest: destination
