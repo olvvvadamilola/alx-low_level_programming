@@ -3,20 +3,14 @@
  * print_numbers - prints numbers
  * @separator: separator
  * @n: number of arguments
- * @...: arguments
  * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
 	va_list args;
+	unsigned int i;
 
 	va_start(args, n);
-
-	if (separator == NULL)
-	{
-		return;
-	}
 
 	for (i = 0; i < n; i++)
 	{
