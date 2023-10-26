@@ -1,21 +1,15 @@
 #include "main.h"
 /**
- * clear_bit - function that sets the value of a bit to 1
- * @n:nmber to be set
+ * clear_bit - set bit to 0
+ * @n: number
  * @index: index
- * Return: 0
+ * Return: 0 on success, -1 on error
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-
-	unsigned long int bitm = ~1UL << index;
-
-	if (index >= sizeof(unsigned long int) * 8)
-	{
+	if (index > sizeof(n) * 8)
 		return (-1);
-	}
-
-	*n &= bitm;
-
+	*n &= ~(1 << index);
 	return (1);
 }
+
