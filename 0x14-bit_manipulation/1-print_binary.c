@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- * print_binary - prints binary representation of an unsigned long int
- * @n: unsigned long int to print
- * Return: void
+ *  print_binary - prints binary representation of an unsigned long int
+ * @n: number to be converted
+ * Return: 0
  */
 void print_binary(unsigned long int n)
 {
+	int shift = sizeof(unsigned long int) * 8 - 1;
 	unsigned long int current = 1;
 	int i;
-	int l_shift = sizeof(unsigned long int) * 8 - 1;
 
 	if (n == 0)
 	{
@@ -16,12 +16,14 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	while ((n & (current << l_shift)) == 0)
+
+	while ((n & (current << shift)) == 0)
 	{
-		l_shift--;
+		shift--;
 	}
-	for (i = 0; i <= l_shift; i++)
+
+	for (i = shift; i >= 0; i--)
 	{
-		_putchar((n & (current << l_shift)) ? '1' : '0');
+		_putchar((n & (current << i)) ? '1' : '0');
 	}
 }
