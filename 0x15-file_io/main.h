@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <stddef.h>
 #include <fcntl.h>
 
 #define BUFFER_SIZE 1024
