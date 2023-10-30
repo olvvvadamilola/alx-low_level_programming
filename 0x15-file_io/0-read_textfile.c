@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * read_textfile - reads a text file
+ * read_textfile - reads a text file and prints to stdout
  * @filename: name of the file
  * @letters: number of letters to read
  * Return: number of bytes read or 0 if error
@@ -33,10 +33,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
-	if (bytes_written < 0 || bytes_written != bytes_read)
+	close(file_d);
+	free(buffer);
+
+	if (bytes_written < 0 || bytes_written < 0)
 	{
-		close(file_d);
-		free(buffer);
 		return (0);
 	}
 	return (bytes_written);
