@@ -1,30 +1,28 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _strstr- locates the first occurrence of the null-terminated string
- * function that locates a substring.
+ * _strstr - prototype
  * @haystack: string
- * @needle: character to find
+ * @needle: also a string
  * Return: 0
  */
 char *_strstr(char *haystack, char *needle)
 {
 	for (; *haystack != '\0'; haystack++)
-
 	{
+		char *l = haystack;
+		char *p = needle;
 
-		char *h = haystack;
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
 
-		char *n = needle;
-
-		for (; *h == *n && *n != '\0'; h++, n++)
-		{}
-
-		if (*n == '\0')
-
+		if (*p == '\0')
+			/* Return a pointer to the first occurrence of 'needle' in 'haystack'. */
 			return (haystack);
 	}
 
-
-	return (NULL);
+	return (0); /* Return NULL if 'needle' is not found in 'haystack'. */
 }

@@ -1,23 +1,22 @@
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
-
 /**
-* _strcpy - prototype to copy strings
-* @dest: destination buffer to copy to
-* @src: source string to copy to
-*
-* Return: dest
-*/
+ * _strcpy - prototype to copy string
+ * @dest: destination of pointer
+ * @src: pointer
+ * Return: 0
+ */
 char *_strcpy(char *dest, char *src)
 {
-	char *dest_main = dest;
+	char *origin_dest = dest;
 
-	for (; *src != '\0'; src++, dest++)
-{
-	*dest = *src;
-}
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
 	*dest = '\0';
 
-	return (dest_main);
+	return (origin_dest);
 }

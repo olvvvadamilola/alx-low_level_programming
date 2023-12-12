@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _memset - fill memory byte with a constant byte
+ * _memset - prototype to fill memory with constant byte
  * @s: array
  * @b: value to be assigned
- * @n: total number of element in array
+ * @n: total number of elements in array
  * Return: 0
  */
 char *_memset(char *s, char b, unsigned int n)

@@ -1,31 +1,37 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _strspn - spans/gets the length of a prefix substring
- * @s: string to access
- * @accept: string to use
+ * _strspn - prototype to get presufix substring
+ * @s: main string to be assessed
+ * @accept: string to be used
  * Return: 0
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, length, count;
+	unsigned int lenght = 0;
+	int a;
 
-	length = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		count = 0;
+		int b;
+		int create = 0;
 
-		for (j = 0; accept[j] != '\0'; j++)
+		for (b = 0; accept[b] != '\0'; b++)
 		{
-			if (accept[j] == s[i])
+
+			if (s[a] == accept[b])
 			{
-				length++;
-				count = 1;
+				create = 1;
+				break;
 			}
+
 		}
-		if (count == 0)
-			return (length);
+		if (create == 0)
+		{
+			return (lenght);
+		}
+		lenght++;
+
 	}
-	return (length);
+	return (lenght);
 }

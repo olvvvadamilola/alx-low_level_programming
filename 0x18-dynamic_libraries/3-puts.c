@@ -1,19 +1,20 @@
+#include <unistd.h>
 #include <stdio.h>
 #include "main.h"
-
 /**
-* _puts - prints string followed by a new line to stdout
-* @str: string to be printed
-*
-* Return: 0
-*/
+ * _puts - prototype to print string
+ * @str: string
+ * Return: 0
+ */
 void _puts(char *str)
 {
-	int i;
+	int n = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
-{
-	_putchar(str[i]);
-}
-	_putchar('\n');
+	while (str[n] != '\0')
+	{
+		n++;
+	}
+
+	write(1, str, n);
+	write(1, "\n", 1);
 }
